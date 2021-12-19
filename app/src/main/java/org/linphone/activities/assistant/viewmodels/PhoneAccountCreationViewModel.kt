@@ -24,7 +24,7 @@ import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import org.linphone.LinphoneApplication.Companion.corePreferences
+import org.linphone.IntelewebApplication.Companion.corePreferences
 import org.linphone.R
 import org.linphone.core.AccountCreator
 import org.linphone.core.AccountCreatorListenerStub

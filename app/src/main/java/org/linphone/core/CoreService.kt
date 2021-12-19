@@ -20,8 +20,8 @@
 package org.linphone.core
 
 import android.content.Intent
-import org.linphone.LinphoneApplication.Companion.coreContext
-import org.linphone.LinphoneApplication.Companion.corePreferences
+import org.linphone.IntelewebApplication.Companion.coreContext
+import org.linphone.IntelewebApplication.Companion.corePreferences
 import org.linphone.core.tools.Log
 import org.linphone.core.tools.service.CoreService
 

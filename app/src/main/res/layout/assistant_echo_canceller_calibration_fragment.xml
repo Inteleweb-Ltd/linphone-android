@@ -38,7 +38,7 @@
                 android:layout_centerHorizontal="true"/>
 
             <ImageView
-                android:src="@drawable/linphone_logo_tinted"
+                android:src="@drawable/inteleweb_logo_tinted"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:contentDescription="@null"

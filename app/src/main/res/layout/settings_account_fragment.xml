@@ -238,13 +238,13 @@
                     linphone:listener="@{viewModel.escapePlusListener}"
                     linphone:checked="@={viewModel.escapePlus}"/>
 
+                <include
+                    layout="@layout/wait_layout"
+                    bind:visibility="@{viewModel.waitForUnregister}" />
+
             </LinearLayout>
 
         </androidx.core.widget.NestedScrollView>
-
-        <include
-            layout="@layout/wait_layout"
-            bind:visibility="@{viewModel.waitForUnregister}"/>
 
     </RelativeLayout>
 

@@ -21,7 +21,7 @@ package org.linphone.activities.main.dialer.viewmodels
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import org.linphone.LinphoneApplication.Companion.coreContext
+import org.linphone.IntelewebApplication.Companion.coreContext
 
 class ConfigFileViewModel : ViewModel() {
     val text = MutableLiveData<String>()

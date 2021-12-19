@@ -25,7 +25,7 @@ import android.telecom.CallAudioState
 import android.telecom.Connection
 import android.telecom.DisconnectCause
 import android.telecom.StatusHints
-import org.linphone.LinphoneApplication.Companion.coreContext
+import org.linphone.IntelewebApplication.Companion.coreContext
 import org.linphone.R
 import org.linphone.core.Call
 import org.linphone.core.tools.Log
@@ -38,7 +38,7 @@ class NativeCallWrapper(var callId: String) : Connection() {
         audioModeIsVoip = true
         statusHints = StatusHints(
             "",
-            Icon.createWithResource(coreContext.context, R.drawable.linphone_logo_tinted),
+            Icon.createWithResource(coreContext.context, R.drawable.inteleweb_logo_tinted),
             Bundle()
         )
     }

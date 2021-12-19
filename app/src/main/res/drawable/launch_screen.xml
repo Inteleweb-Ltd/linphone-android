@@ -4,12 +4,12 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/linphone_logo"
+            android:src="@drawable/inteleweb_logo"
             android:tint="@color/primary_color"/>
     </item>
-    <item android:top="300dp">
+    <item android:top="500dp">
         <bitmap
             android:gravity="center"
-            android:src="@drawable/linphone_app_name_logo" />
+            android:src="@drawable/inteleweb_app_name_logo" />
     </item>
 </layer-list>

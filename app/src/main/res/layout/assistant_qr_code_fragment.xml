@@ -31,6 +31,7 @@
                 android:id="@+id/qr_code_capture_texture"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:fontFamily="@font/ubuntu_regular"
                 android:layout_centerInParent="true"/>
 
             <ImageView

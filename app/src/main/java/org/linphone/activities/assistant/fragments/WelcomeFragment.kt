@@ -1,24 +1,7 @@
-/*
- * Copyright (c) 2010-2020 Belledonne Communications SARL.
- *
- * This file is part of linphone-android
- * (see https://www.linphone.org).
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.linphone.activities.assistant.fragments
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -26,15 +9,16 @@ import android.text.SpannableString
 import android.text.Spanned
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
+import android.util.Log
 import android.view.View
+import android.webkit.JavascriptInterface
 import androidx.lifecycle.ViewModelProvider
 import java.util.regex.Pattern
-import org.linphone.LinphoneApplication.Companion.corePreferences
+import org.linphone.IntelewebApplication.Companion.corePreferences
 import org.linphone.R
 import org.linphone.activities.*
 import org.linphone.activities.assistant.viewmodels.WelcomeViewModel
 import org.linphone.activities.navigateToAccountLogin
-import org.linphone.activities.navigateToEmailAccountCreation
 import org.linphone.activities.navigateToGenericLogin
 import org.linphone.activities.navigateToRemoteProvisioning
 import org.linphone.databinding.AssistantWelcomeFragmentBinding
@@ -44,6 +28,7 @@ class WelcomeFragment : GenericFragment<AssistantWelcomeFragmentBinding>() {
 
     override fun getLayoutId(): Int = R.layout.assistant_welcome_fragment
 
+    @SuppressLint("SetJavaScriptEnabled")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -53,11 +38,33 @@ class WelcomeFragment : GenericFragment<AssistantWelcomeFragmentBinding>() {
         binding.viewModel = viewModel
 
         binding.setCreateAccountClickListener {
-            if (resources.getBoolean(R.bool.isTablet)) {
-                navigateToEmailAccountCreation()
-            } else {
-                navigateToPhoneAccountCreation()
-            }
+//            if (resources.getBoolean(R.bool.isTablet)) {
+//                navigateToEmailAccountCreation()
+//            } else {
+//                navigateToPhoneAccountCreation()
+//            }
+//            binding.scrollWelcomeView?.visibility = View.GONE
+//            binding.webviewLogin?.visibility = View.VISIBLE
+//            binding.webviewLogin?.webViewClient = object : WebViewClient() {
+//                override fun onPageFinished(view: WebView?, url: String?) {
+//                    super.onPageFinished(view, url)
+//                    binding.webviewLogin?.evaluateJavascript("(function() { return JSON.stringify(localStorage); })();") { s ->
+//                        if (s != "\"{}\"") {
+// //                            var jsonAsStr = s.substring(1, s.length - 1).replace("\\", "")
+// //                            val obj = JSONObject(jsonAsStr)
+// //                            val token = obj.getString("token")
+//                        }
+//                    }
+//                }
+//            }
+//            binding.webviewLogin?.loadUrl("accounts.Inteleweb.com")
+//            binding.webviewLogin?.settings?.javaScriptEnabled = true
+//            binding.webviewLogin?.addJavascriptInterface(WebAppInterface(requireContext()), "Android")
+//            val link = binding.edtDeeplink?.text.toString()
+//            if (link.isEmpty()) {
+//                Toast.makeText(requireContext(), "Please Enter Link", Toast.LENGTH_SHORT).show()
+//            } else {
+//            }
         }
 
         binding.setAccountLoginClickListener {
@@ -123,5 +130,12 @@ class WelcomeFragment : GenericFragment<AssistantWelcomeFragmentBinding>() {
 
         binding.termsAndPrivacy.text = spannable
         binding.termsAndPrivacy.movementMethod = LinkMovementMethod.getInstance()
+    }
+
+    class WebAppInterface(private val mContext: Context) {
+        @JavascriptInterface
+        fun consumeToken(token: String) {
+            Log.d("consumeToken", "consumeToken: --- $token ")
+        }
     }
 }

@@ -38,7 +38,7 @@
 
                 <include
                     android:id="@+id/content"
-                    layout="@layout/main_activity_content"/>
+                    layout="@layout/main_activity_content" />
 
                 <!-- Side Menu -->
                 <RelativeLayout

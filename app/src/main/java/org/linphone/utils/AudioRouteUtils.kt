@@ -20,7 +20,7 @@
 package org.linphone.utils
 
 import android.telecom.CallAudioState
-import org.linphone.LinphoneApplication.Companion.coreContext
+import org.linphone.IntelewebApplication.Companion.coreContext
 import org.linphone.compatibility.Compatibility
 import org.linphone.core.AudioDevice
 import org.linphone.core.Call

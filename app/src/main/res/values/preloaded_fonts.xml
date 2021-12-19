@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/open_sans_bold</item>
+        <item>@font/open_sans_regular</item>
+        <item>@font/open_sans_semibold</item>
+        <item>@font/signika</item>
+        <item>@font/signika_bold</item>
+        <item>@font/signika_semibold</item>
+        <item>@font/ubuntu_bold</item>
+        <item>@font/ubuntu_medium</item>
+        <item>@font/ubuntu_regular</item>
+    </array>
+</resources>

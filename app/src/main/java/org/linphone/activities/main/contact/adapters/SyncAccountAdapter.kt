@@ -8,7 +8,7 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import kotlin.collections.ArrayList
-import org.linphone.LinphoneApplication.Companion.coreContext
+import org.linphone.IntelewebApplication.Companion.coreContext
 import org.linphone.R
 
 class SyncAccountAdapter : BaseAdapter() {

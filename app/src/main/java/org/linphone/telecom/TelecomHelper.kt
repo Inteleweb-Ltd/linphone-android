@@ -30,7 +30,7 @@ import android.telecom.PhoneAccount
 import android.telecom.PhoneAccountHandle
 import android.telecom.TelecomManager
 import android.telecom.TelecomManager.*
-import org.linphone.LinphoneApplication.Companion.coreContext
+import org.linphone.IntelewebApplication.Companion.coreContext
 import org.linphone.R
 import org.linphone.contact.Contact
 import org.linphone.core.Call
@@ -162,7 +162,7 @@ class TelecomHelper private constructor(context: Context) {
         val identity = coreContext.core.defaultAccount?.params?.identityAddress?.asStringUriOnly() ?: ""
         val account = PhoneAccount.builder(accountHandle, context.getString(R.string.app_name))
             .setAddress(Uri.parse(identity))
-            .setIcon(Icon.createWithResource(context, R.drawable.linphone_logo_tinted))
+            .setIcon(Icon.createWithResource(context, R.drawable.inteleweb_logo_tinted))
             .setCapabilities(PhoneAccount.CAPABILITY_SELF_MANAGED)
             .setHighlightColor(context.getColor(R.color.primary_color))
             .setShortDescription(context.getString(R.string.app_description))

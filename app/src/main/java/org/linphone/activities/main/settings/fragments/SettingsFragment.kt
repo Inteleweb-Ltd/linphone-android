@@ -1,24 +1,7 @@
-/*
- * Copyright (c) 2010-2020 Belledonne Communications SARL.
- *
- * This file is part of linphone-android
- * (see https://www.linphone.org).
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.linphone.activities.main.settings.fragments
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.core.view.doOnPreDraw
@@ -26,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import androidx.slidingpanelayout.widget.SlidingPaneLayout
 import com.google.android.material.transition.MaterialSharedAxis
-import org.linphone.LinphoneApplication.Companion.corePreferences
+import org.linphone.IntelewebApplication.Companion.corePreferences
 import org.linphone.R
 import org.linphone.activities.*
 import org.linphone.activities.main.fragments.SecureFragment
@@ -130,6 +113,15 @@ class SettingsFragment : SecureFragment<SettingsFragmentBinding>() {
             override fun onAccountClicked(identity: String) {
                 Log.i("[Settings] Navigation to settings for account with identity: $identity")
                 navigateToAccountSettings(identity)
+            }
+        }
+
+        viewModel.accountManageListener = object : SettingListenerStub() {
+            override fun onClicked() {
+                val url = "https://accounts.inteleweb.com/"
+                val i = Intent(Intent.ACTION_VIEW)
+                i.data = Uri.parse(url)
+                startActivity(i)
             }
         }
 

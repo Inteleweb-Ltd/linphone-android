@@ -33,15 +33,25 @@
             android:layout_alignParentTop="true"
             tools:layout="@layout/assistant_top_bar_fragment" />
 
+        <WebView
+            android:id="@+id/webviewLogin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            />
+
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:id="@+id/scrollWelcomeView"
             android:layout_below="@id/top_bar_fragment">
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
 
                 <TextView
                     style="@style/standard_text_font"
@@ -88,10 +98,40 @@
 
                     </LinearLayout>
 
+<!--                    <EditText-->
+<!--                        android:id="@+id/edt_deeplink"-->
+<!--                        style="@style/button_font"-->
+<!--                        android:gravity="center"-->
+<!--                        android:textAllCaps="false"-->
+<!--                        android:padding="10dp"-->
+<!--                        android:layout_margin="20dp"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_gravity="fill"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@drawable/assistant_button"-->
+<!--                        android:textColor="@drawable/assistant_button_text_color"-->
+<!--                        android:hint="@string/paste_link_from_inteleweb" />-->
+
+                    <TextView
+                        android:id="@+id/account_intele_creation"
+                        android:enabled="@{viewModel.termsAndPrivacyAccepted}"
+                        android:onClick="@{createAccountClickListener}"
+                        android:visibility="gone"
+                        style="@style/button_font"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:layout_margin="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="fill"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/assistant_button"
+                        android:textColor="@drawable/assistant_button_text_color"
+                        android:text="@string/login_with_inteleweb_account" />
+
                     <TextView
                         android:id="@+id/account_creation"
                         android:enabled="@{viewModel.termsAndPrivacyAccepted}"
-                        android:visibility="@{viewModel.showCreateAccount ? View.VISIBLE : View.GONE}"
+                        android:visibility="@{viewModel.showCreateAccount ? View.GONE : View.GONE}"
                         android:onClick="@{createAccountClickListener}"
                         style="@style/button_font"
                         android:gravity="center"
@@ -107,7 +147,7 @@
                     <TextView
                         android:id="@+id/account_connection"
                         android:enabled="@{viewModel.termsAndPrivacyAccepted}"
-                        android:visibility="@{viewModel.showLinphoneLogin ? View.VISIBLE : View.GONE}"
+                        android:visibility="@{viewModel.showLinphoneLogin ? View.GONE : View.GONE}"
                         android:onClick="@{accountLoginClickListener}"
                         style="@style/button_font"
                         android:gravity="center"
@@ -123,7 +163,7 @@
                     <TextView
                         android:id="@+id/generic_connection"
                         android:enabled="@{viewModel.termsAndPrivacyAccepted}"
-                        android:visibility="@{viewModel.showGenericLogin ? View.VISIBLE : View.GONE}"
+                        android:visibility="@{viewModel.showGenericLogin ? View.GONE : View.GONE}"
                         android:onClick="@{genericAccountLoginClickListener}"
                         style="@style/button_font"
                         android:gravity="center"
@@ -150,7 +190,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/assistant_button"
                         android:textColor="@drawable/assistant_button_text_color"
-                        android:text="@string/assistant_remote_provisioning" />
+                        android:text="@string/login_with_inteleweb_account" />
 
                 </GridLayout>
 

@@ -103,6 +103,7 @@
                     <TextView
                         style="@style/settings_category_font"
                         android:text="@string/settings_accounts_title"
+                        android:enabled="false"
                         android:visibility="@{viewModel.showAccountSettings &amp;&amp; !viewModel.accounts.empty ? View.VISIBLE : View.GONE}"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
@@ -113,9 +114,20 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
+                        android:enabled="false"
+                        android:clickable="false"
                         android:visibility="@{viewModel.showAccountSettings ? View.VISIBLE : View.GONE}"
                         linphone:entries="@{viewModel.accounts}"
                         linphone:layout="@{@layout/settings_account_cell}"/>
+
+
+                    <include
+                        android:id="@+id/manage_account"
+                        layout="@layout/settings_widget_basic"
+                        android:visibility="visible"
+                        linphone:listener="@{viewModel.accountManageListener}"
+                        linphone:title="@{@string/settings_manage_acc_title}"
+                        linphone:icon="@{@drawable/settings_contacts}" />
 
                     <TextView
                         style="@style/settings_category_font"
@@ -155,7 +167,7 @@
 
                     <include
                         layout="@layout/settings_widget_basic"
-                        android:visibility="@{viewModel.showChatSettings ? View.VISIBLE : View.GONE}"
+                        android:visibility="gone"
                         linphone:listener="@{viewModel.chatSettingsListener}"
                         linphone:title="@{@string/settings_chat_title}"
                         linphone:icon="@{@drawable/settings_chat}" />
@@ -180,6 +192,7 @@
                         linphone:listener="@{viewModel.advancedSettingsListener}"
                         linphone:title="@{@string/settings_advanced_title}"
                         linphone:icon="@{@drawable/settings_advanced}" />
+
 
                 </LinearLayout>
 

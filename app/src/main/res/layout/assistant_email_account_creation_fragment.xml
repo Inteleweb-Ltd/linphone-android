@@ -41,6 +41,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/assistant_create_account"
+                    android:fontFamily="@font/ubuntu_regular"
                     android:paddingTop="10dp"
                     android:textAllCaps="true" />
 

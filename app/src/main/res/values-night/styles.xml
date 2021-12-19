@@ -44,5 +44,11 @@
         <item name="darkToolbarTextColor">@color/white_color</item>
 
         <item name="button_background_drawable">@drawable/button_background_dark</item>
+        <item name="android:textViewStyle">@style/DefaultTvFont</item>
+        <item name="android:buttonStyle">@style/DefaultTvFont</item>
+    </style>
+
+    <style name="DefaultTvFont" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/ubuntu_regular</item>
     </style>
 </resources>

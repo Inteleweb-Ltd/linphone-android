@@ -21,14 +21,14 @@
         android:background="@color/grey_color">
 
         <ImageView
-            android:visibility="@{viewModel.showPreview ? View.GONE : View.VISIBLE}"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@id/ui_layout"
-            android:padding="30dp"
             android:contentDescription="@null"
-            android:src="@drawable/dialer_background" />
+            android:padding="30dp"
+            android:src="@drawable/dialer_background"
+            android:visibility="@{viewModel.showPreview ? View.GONE : View.VISIBLE}" />
 
         <org.linphone.mediastream.video.capture.CaptureTextureView
             android:id="@+id/video_preview_window"

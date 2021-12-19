@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 
 <!DOCTYPE resources [
-    <!ENTITY appName "Linphone">
+    <!ENTITY appName "Inteleweb">
 ]>
 
 <resources xmlns:tools="http://schemas.android.com/tools">
@@ -26,7 +26,7 @@
     <string name="logs_upload_failure">Failed to upload logs!</string>
     <string name="logs_reset_complete">Logs have been cleared</string>
     <string name="logs_url_copied_to_clipboard">Logs URL copied into clipboard</string>
-    <string name="about_bugreport_email" translatable="false">linphone-android@belledonne-communications.com</string>
+    <string name="about_bugreport_email" translatable="false">yechiel@inteleweb.com</string>
 
     <!-- Common -->
     <string name="error">Error</string>
@@ -288,7 +288,7 @@
     <string name="assistant_privacy_policy_link" translatable="false">https://www.linphone.org/privacy-policy</string>
     <string name="assistant_general_terms">terms of use</string>
     <string name="assistant_privacy_policy">privacy policy</string>
-    <string name="assistant_read_and_agree_terms">I accept Belledonne Communications\' %1$s and %2$s</string>
+    <string name="assistant_read_and_agree_terms">I accept Inteleweb Ltd\' %1$s and %2$s</string>
 
     <!-- Assistant errors -->
     <string name="assistant_error_phone_number_invalid_characters">Only digits are expected here</string>
@@ -336,6 +336,7 @@
     <!-- Assistant remote provisioning -->
     <string name="assistant_remote_provisioning_title">Fetch remote configuration</string>
     <string name="assistant_remote_provisioning_desc">Please provide your configuration URL</string>
+    <string name="contact_inteleweb_support" translatable="false">Contact Inteleweb support for configuration URL</string>
     <string name="assistant_remote_provisioning_url">URL</string>
     <string name="assistant_remote_provisioning_wrong_format">Unknown URL format, can\'t download provisioning…</string>
     <string name="assistant_remote_provisioning_failure">Failed to download or apply remote provisioning profile…</string>
@@ -343,7 +344,7 @@
     <string name="assistant_launch_qrcode">QRCode</string>
 
     <!-- Settings -->
-    <string name="settings_accounts_title">SIP Accounts</string>
+    <string name="settings_accounts_title" translatable="false">Accounts</string>
     <string name="settings_default_account_subtitle">Default account</string>
     <string name="settings_list_title">Preferences</string>
     <string name="settings_tunnel_title">Tunnel</string>
@@ -354,6 +355,7 @@
     <string name="settings_network_title">Network</string>
     <string name="settings_contacts_title">Contacts</string>
     <string name="settings_advanced_title">Advanced</string>
+    <string name="settings_manage_acc_title">Manage Inteleweb Account</string>
     <string name="settings_primary_account_title">Primary Account</string>
     <string name="settings_primary_account_display_name_title">Display Name</string>
     <string name="settings_primary_account_username_title">Username</string>
@@ -737,4 +739,6 @@
     <string name="content_description_cancel_voice_recording">Cancel voice recording</string>
     <string name="content_description_pause_voice_recording_playback">Pause voice recording</string>
     <string name="content_description_play_voice_recording">Play voice recording</string>
+    <string name="login_with_inteleweb_account">Login With Inteleweb Account</string>
+    <string name="paste_link_from_inteleweb">Paste link from Inteleweb</string>
 </resources>

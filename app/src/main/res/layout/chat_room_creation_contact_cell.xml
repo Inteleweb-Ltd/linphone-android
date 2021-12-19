@@ -74,7 +74,7 @@
                 android:layout_centerVertical="true"
                 android:paddingRight="10dp"
                 android:contentDescription="@string/content_description_linphone_user"
-                android:src="@drawable/linphone_logo_tinted" />
+                android:src="@drawable/inteleweb_logo_tinted" />
 
             <ImageView
                 android:visibility="@{data.isSelected ? View.VISIBLE : View.INVISIBLE}"

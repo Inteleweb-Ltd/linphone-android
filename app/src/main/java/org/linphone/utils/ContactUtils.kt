@@ -23,7 +23,7 @@ import android.content.ContentResolver
 import android.net.Uri
 import android.provider.ContactsContract
 import java.io.*
-import org.linphone.LinphoneApplication.Companion.coreContext
+import org.linphone.IntelewebApplication.Companion.coreContext
 import org.linphone.core.tools.Log
 
 class ContactUtils {

@@ -87,7 +87,7 @@
                         android:layout_gravity="center"
                         android:layout_marginBottom="10dp"
                         android:contentDescription="@null"
-                        android:src="@drawable/linphone_logo_tinted"/>
+                        android:src="@drawable/inteleweb_logo_tinted"/>
 
                     <ImageView
                         android:layout_width="125dp"
@@ -95,7 +95,7 @@
                         android:adjustViewBounds="true"
                         android:layout_gravity="center"
                         android:contentDescription="@null"
-                        android:src="@drawable/linphone_app_name_logo" />
+                        android:src="@drawable/inteleweb_app_name_logo" />
 
                     <TextView
                         android:textSize="13sp"
@@ -103,6 +103,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:fontFamily="@font/ubuntu_regular"
                         android:text="@string/app_description" />
 
                     <TextView
@@ -112,6 +113,7 @@
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:paddingTop="20dp"
+                        android:fontFamily="@font/ubuntu_regular"
                         android:textColorLink="?attr/secondaryTextColor"
                         android:textIsSelectable="true"
                         android:text="@{String.format(@string/about_version, viewModel.appVersion)}" />
@@ -122,6 +124,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
+                        android:fontFamily="@font/ubuntu_regular"
                         android:textColorLink="?attr/secondaryTextColor"
                         android:textIsSelectable="true"
                         android:text="@{String.format(@string/about_liblinphone_sdk_version, viewModel.sdkVersion)}" />
@@ -145,6 +148,7 @@
                         android:autoLink="web"
                         android:gravity="center"
                         android:paddingTop="20dp"
+                        android:fontFamily="@font/ubuntu_regular"
                         android:text="@string/about_link"
                         android:textColorLink="@color/primary_color" />
 
@@ -157,6 +161,7 @@
                         android:autoLink="web"
                         android:paddingTop="10dp"
                         android:gravity="center"
+                        android:fontFamily="@font/ubuntu_regular"
                         android:text="@string/about_privacy_policy"
                         android:textColorLink="@color/primary_color" />
 
@@ -169,6 +174,7 @@
                         android:gravity="center"
                         android:paddingTop="10dp"
                         android:paddingBottom="20dp"
+                        android:fontFamily="@font/ubuntu_regular"
                         android:text="@string/about_text" />
 
                     <View

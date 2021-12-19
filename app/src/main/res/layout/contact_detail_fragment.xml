@@ -123,7 +123,7 @@
 
         <include
             layout="@layout/wait_layout"
-            tools:visibility="@{viewModel.waitForChatRoomCreation}"/>
+            tools:visibility="@{viewModel.waitForChatRoomCreation}" />
 
     </RelativeLayout>
 

@@ -55,7 +55,7 @@
                 android:layout_height="20dp"
                 android:adjustViewBounds="true"
                 android:scaleType="centerInside"
-                android:src="@drawable/linphone_logo_tinted"
+                android:src="@drawable/inteleweb_logo_tinted"
                 android:layout_marginRight="10dp"
                 android:contentDescription="@string/content_description_linphone_user"
                 android:visibility="@{viewModel.contact.hasPresence() ? View.VISIBLE : View.GONE}" />

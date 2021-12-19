@@ -48,9 +48,9 @@
         <action
             android:id="@+id/action_masterContactsFragment_to_dialerFragment"
             app:destination="@id/dialerFragment" />
-        <action
-            android:id="@+id/action_masterContactsFragment_to_masterChatRoomsFragment"
-            app:destination="@id/masterChatRoomsFragment" />
+<!--        <action-->
+<!--            android:id="@+id/action_masterContactsFragment_to_masterChatRoomsFragment"-->
+<!--            app:destination="@id/masterChatRoomsFragment" />-->
         <deepLink
             android:id="@+id/contactDeepLink"
             app:uri="linphone-android://contact/view/{id}"
@@ -75,9 +75,9 @@
         <action
             android:id="@+id/action_masterCallLogsFragment_to_masterContactsFragment"
             app:destination="@id/masterContactsFragment" />
-        <action
-            android:id="@+id/action_masterCallLogsFragment_to_masterChatRoomsFragment"
-            app:destination="@id/masterChatRoomsFragment" />
+<!--        <action-->
+<!--            android:id="@+id/action_masterCallLogsFragment_to_masterChatRoomsFragment"-->
+<!--            app:destination="@id/masterChatRoomsFragment" />-->
     </fragment>
     <fragment
         android:id="@+id/dialerFragment"
@@ -90,9 +90,9 @@
         <action
             android:id="@+id/action_dialerFragment_to_masterContactsFragment"
             app:destination="@id/masterContactsFragment" />
-        <action
-            android:id="@+id/action_dialerFragment_to_masterChatRoomsFragment"
-            app:destination="@id/masterChatRoomsFragment" />
+<!--        <action-->
+<!--            android:id="@+id/action_dialerFragment_to_masterChatRoomsFragment"-->
+<!--            app:destination="@id/masterChatRoomsFragment" />-->
         <argument
             android:name="Transfer"
             app:argType="boolean"

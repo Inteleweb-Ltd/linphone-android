@@ -1,22 +1,3 @@
-/*
- * Copyright (c) 2010-2020 Belledonne Communications SARL.
- *
- * This file is part of linphone-android
- * (see https://www.linphone.org).
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.linphone.activities.main.settings.viewmodels
 
 import androidx.lifecycle.MutableLiveData
@@ -24,8 +5,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import java.lang.NumberFormatException
 import kotlin.collections.ArrayList
-import org.linphone.LinphoneApplication.Companion.coreContext
-import org.linphone.LinphoneApplication.Companion.corePreferences
+import org.linphone.IntelewebApplication.Companion.coreContext
+import org.linphone.IntelewebApplication.Companion.corePreferences
 import org.linphone.R
 import org.linphone.activities.main.settings.SettingListenerStub
 import org.linphone.core.*
@@ -192,7 +173,8 @@ class AccountSettingsViewModel(val account: Account) : GenericSettingsViewModel(
     val disableListener = object : SettingListenerStub() {
         override fun onBoolValueChanged(newValue: Boolean) {
             val params = account.params.clone()
-            params.registerEnabled = !newValue
+//            params.registerEnabled = !newValue
+            params.setRegisterEnabled(!newValue)
             account.params = params
         }
     }
@@ -239,7 +221,8 @@ class AccountSettingsViewModel(val account: Account) : GenericSettingsViewModel(
             }
 
             val params = account.params.clone()
-            params.registerEnabled = false
+//            params.registerEnabled = false
+            params.setRegisterEnabled(false)
             account.params = params
 
             if (!registered) {
@@ -288,7 +271,8 @@ class AccountSettingsViewModel(val account: Account) : GenericSettingsViewModel(
     val outboundProxyListener = object : SettingListenerStub() {
         override fun onBoolValueChanged(newValue: Boolean) {
             val params = account.params.clone()
-            params.outboundProxyEnabled = newValue
+            params.setOutboundProxyEnabled(newValue)
+//            params.outboundProxyEnabled = newValue
             account.params = params
         }
     }
@@ -370,7 +354,8 @@ class AccountSettingsViewModel(val account: Account) : GenericSettingsViewModel(
     val escapePlusListener = object : SettingListenerStub() {
         override fun onBoolValueChanged(newValue: Boolean) {
             val params = account.params.clone()
-            params.dialEscapePlusEnabled = newValue
+            params.setDialEscapePlusEnabled(newValue)
+//            params.dialEscapePlusEnabled = newValue
             account.params = params
         }
     }
@@ -424,11 +409,15 @@ class AccountSettingsViewModel(val account: Account) : GenericSettingsViewModel(
         userName.value = params.identityAddress?.username
         userId.value = account.findAuthInfo()?.userid
         domain.value = params.identityAddress?.domain
-        disable.value = !params.registerEnabled
+        disable.value = false
+//        disable.value = !params.registerEnabled
+//        disable.value = !params.getRegisterEnabled()
         pushNotification.value = params.pushNotificationAllowed
         pushNotificationsAvailable.value = core.isPushNotificationAvailable
         proxy.value = params.serverAddress?.asStringUriOnly()
-        outboundProxy.value = params.outboundProxyEnabled
+//        outboundProxy.value = params.getOutboundProxyEnabled()
+//        outboundProxy.value = params.outboundProxyEnabled
+        outboundProxy.value = false
         stunServer.value = params.natPolicy?.stunServer
         ice.value = params.natPolicy?.iceEnabled()
         avpf.value = params.avpfMode == AVPFMode.Enabled
@@ -436,7 +425,9 @@ class AccountSettingsViewModel(val account: Account) : GenericSettingsViewModel(
         expires.value = params.expires
         prefix.value = params.internationalPrefix
         dialPrefix.value = params.useInternationalPrefixForCallsAndChats
-        escapePlus.value = params.dialEscapePlusEnabled
+//        escapePlus.value = params.getDialEscapePlusEnabled()
+//        escapePlus.value = params.dialEscapePlusEnabled
+        escapePlus.value = false
     }
 
     private fun initTransportList() {
