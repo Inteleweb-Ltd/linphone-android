@@ -43,7 +43,7 @@
                 android:layout_marginRight="10dp"
                 android:adjustViewBounds="true"
                 android:scaleType="centerInside"
-                android:src="@drawable/linphone_logo_tinted" />
+                android:src="@drawable/inteleweb_logo_tinted" />
 
             <TextView
                 android:visibility="@{data.showInvite ? View.VISIBLE : View.GONE}"

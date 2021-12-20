@@ -162,7 +162,7 @@ class TelecomHelper private constructor(context: Context) {
         val identity = coreContext.core.defaultAccount?.params?.identityAddress?.asStringUriOnly() ?: ""
         val account = PhoneAccount.builder(accountHandle, context.getString(R.string.app_name))
             .setAddress(Uri.parse(identity))
-            .setIcon(Icon.createWithResource(context, R.drawable.linphone_logo_tinted))
+            .setIcon(Icon.createWithResource(context, R.drawable.inteleweb_logo_tinted))
             .setCapabilities(PhoneAccount.CAPABILITY_SELF_MANAGED)
             .setHighlightColor(context.getColor(R.color.primary_color))
             .setShortDescription(context.getString(R.string.app_description))

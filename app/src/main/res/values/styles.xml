@@ -45,11 +45,21 @@
         <item name="darkToolbarTextColor">@color/white_color</item>
 
         <item name="button_background_drawable">@drawable/button_background_light</item>
+        <item name="android:textViewStyle">@style/DefaultTvFont</item>
+        <item name="android:buttonStyle">@style/DefaultBtnFont</item>
     </style>
 
     <style name="FullScreenTheme" parent="@style/AppTheme">
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="DefaultTvFont" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/ubuntu_regular</item>
+    </style>
+
+    <style name="DefaultBtnFont" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">@font/ubuntu_regular</item>
     </style>
 
     <!-- Numpad -->
@@ -60,6 +70,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="layout_maxWidth">50dp</item>
         <item name="layout_maxHeight">50dp</item>
+        <item name="fontFamily">@font/signika</item>
     </style>
 
     <!-- Assistant related -->
@@ -67,6 +78,7 @@
     <style name="assistant_input_field_header_font" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">?attr/primaryTextColor</item>
         <item name="android:textSize">13sp</item>
+        <item name="fontFamily">@font/ubuntu_regular</item>
     </style>
 
     <style name="assistant_country_dialog_style" parent="Base.Theme.AppCompat.Dialog">
@@ -74,6 +86,7 @@
         <item name="android:textColorPrimary">@color/light_primary_text_color</item>
         <item name="android:windowMinWidthMajor">97%</item>
         <item name="android:windowMinWidthMinor">97%</item>
+        <item name="fontFamily">@font/signika</item>
     </style>
 
     <!-- About related -->
@@ -82,11 +95,13 @@
         <item name="android:textColor">?attr/primaryTextColor</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">italic</item>
+        <item name="fontFamily">@font/ubuntu_regular</item>
     </style>
 
     <style name="about_version_font" parent="@android:style/TextAppearance.Small">
         <item name="android:textColor">@color/light_grey_color</item>
         <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/ubuntu_regular</item>
     </style>
 
     <!-- Contact related -->
@@ -94,6 +109,7 @@
     <style name="contact_organization_font" parent="@android:style/TextAppearance.Small">
         <item name="android:textColor">?attr/primaryTextColor</item>
         <item name="android:textSize">13sp</item>
+        <item name="fontFamily">@font/ubuntu_regular</item>
     </style>
 
     <style name="contact_name_list_cell_font" parent="@android:style/TextAppearance.Medium">
@@ -130,11 +146,13 @@
     <style name="call_stats_title_font" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">?attr/primaryTextColor</item>
         <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/signika</item>
     </style>
 
     <style name="call_stats_font" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">?attr/primaryTextColor</item>
         <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/ubuntu_regular</item>
     </style>
 
     <!-- Dialog related -->
@@ -145,23 +163,27 @@
         <item name="android:textStyle">bold</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:lineSpacingExtra">6.7sp</item>
+        <item name="fontFamily">@font/signika</item>
     </style>
 
     <style name="dialog_message_font" parent="@android:style/TextAppearance.Small">
         <item name="android:textColor">@color/white_color</item>
         <item name="android:textSize">21sp</item>
+        <item name="fontFamily">@font/ubuntu_regular</item>
     </style>
 
     <style name="dialog_cancel_button_font" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">@color/dark_grey_color</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/signika</item>
     </style>
 
     <style name="dialog_action_button_font" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">@color/white_color</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/signika</item>
     </style>
 
     <style name="dialog_zrtp_colored_font" parent="@android:style/TextAppearance.Medium">
@@ -185,6 +207,7 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:paddingLeft">20dp</item>
         <item name="android:paddingRight">20dp</item>
+        <item name="fontFamily">@font/signika</item>
     </style>
 
     <!-- Settings -->
@@ -194,11 +217,13 @@
         <item name="android:textAllCaps">true</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/signika</item>
     </style>
 
     <style name="settings_item_font" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">?attr/primaryTextColor</item>
         <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/signika</item>
     </style>
 
     <style name="settings_item_subtitle_font" parent="@android:style/TextAppearance.Medium">
@@ -213,6 +238,7 @@
         <item name="android:textAllCaps">true</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">24sp</item>
+        <item name="fontFamily">@font/signika_bold</item>
     </style>
 
     <style name="accent_colored_title_font" parent="@android:style/TextAppearance.Medium">
@@ -220,68 +246,80 @@
         <item name="android:textAllCaps">true</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">24sp</item>
+        <item name="fontFamily">@font/signika_bold</item>
     </style>
 
     <style name="sip_uri_font" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">?attr/accentColor</item>
         <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/ubuntu_regular</item>
     </style>
 
     <style name="sip_uri_small_font" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">?attr/accentColor</item>
         <item name="android:textSize">13sp</item>
+        <item name="fontFamily">@font/ubuntu_regular</item>
     </style>
 
     <style name="toolbar_small_title_font" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">?attr/primaryTextColor</item>
         <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/signika</item>
     </style>
 
     <style name="empty_list_font" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">?attr/primaryTextColor</item>
         <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/ubuntu_regular</item>
     </style>
 
     <style name="chat_file_attachment_font" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">?attr/primaryTextColor</item>
         <item name="android:textSize">12sp</item>
-        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:fontFamily">@font/ubuntu_regular</item>
     </style>
 
     <style name="standard_text_font" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">?attr/primaryTextColor</item>
         <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/ubuntu_regular</item>
     </style>
 
     <style name="button_font" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">?attr/primaryTextColor</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/ubuntu_regular</item>
     </style>
 
     <style name="button_small_font" parent="@android:style/TextAppearance.Small">
         <item name="android:textColor">?attr/primaryTextColor</item>
         <item name="android:textSize">13sp</item>
+        <item name="fontFamily">@font/signika</item>
     </style>
 
     <style name="button_tiny_font" parent="@android:style/TextAppearance.Small">
         <item name="android:textColor">?attr/primarySubtextDarkColor</item>
         <item name="android:textSize">10sp</item>
+        <item name="fontFamily">@font/signika</item>
     </style>
 
     <style name="standard_small_text_font" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">?attr/primarySubtextDarkColor</item>
         <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/open_sans_regular</item>
     </style>
 
     <style name="unread_count_font" parent="@android:style/TextAppearance.Small">
         <item name="android:textColor">@color/white_color</item>
         <item name="android:textSize">10sp</item>
+        <item name="fontFamily">@font/signika</item>
     </style>
 
     <style name="file_transfer_progress_font" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">?attr/secondaryTextColor</item>
         <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/signika</item>
     </style>
 
 </resources>
