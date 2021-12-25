@@ -25,6 +25,7 @@ import org.linphone.LinphoneApplication.Companion.coreContext
 import org.linphone.LinphoneApplication.Companion.corePreferences
 import org.linphone.R
 import org.linphone.activities.GenericActivity
+import org.linphone.activities.main.MainActivity
 import org.linphone.core.tools.Log
 
 class LauncherActivity : GenericActivity() {
@@ -50,9 +51,7 @@ class LauncherActivity : GenericActivity() {
         }
 
         val intent = Intent()
-        intent.setClassName("com.android.launcher2", "com.android.launcher2.Launcher")
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-        startActivity(intent)
+        intent.setClass(this, MainActivity::class.java)
 
         // Propagate current intent action, type and data
         if (getIntent() != null) {

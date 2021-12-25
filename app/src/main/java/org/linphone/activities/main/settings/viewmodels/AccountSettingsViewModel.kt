@@ -192,7 +192,7 @@ class AccountSettingsViewModel(val account: Account) : GenericSettingsViewModel(
     val disableListener = object : SettingListenerStub() {
         override fun onBoolValueChanged(newValue: Boolean) {
             val params = account.params.clone()
-            params.enableRegister(newValue)
+            params.registerEnabled = !newValue
             account.params = params
         }
     }
@@ -239,7 +239,7 @@ class AccountSettingsViewModel(val account: Account) : GenericSettingsViewModel(
             }
 
             val params = account.params.clone()
-            params.enableRegister(false)
+            params.registerEnabled = false
             account.params = params
 
             if (!registered) {
@@ -288,7 +288,7 @@ class AccountSettingsViewModel(val account: Account) : GenericSettingsViewModel(
     val outboundProxyListener = object : SettingListenerStub() {
         override fun onBoolValueChanged(newValue: Boolean) {
             val params = account.params.clone()
-            params.enableOutboundProxy(newValue)
+            params.outboundProxyEnabled = newValue
             account.params = params
         }
     }
@@ -370,7 +370,7 @@ class AccountSettingsViewModel(val account: Account) : GenericSettingsViewModel(
     val escapePlusListener = object : SettingListenerStub() {
         override fun onBoolValueChanged(newValue: Boolean) {
             val params = account.params.clone()
-            params.setDialEscapePlusEnabled(newValue)
+            params.dialEscapePlusEnabled = newValue
             account.params = params
         }
     }
@@ -424,11 +424,11 @@ class AccountSettingsViewModel(val account: Account) : GenericSettingsViewModel(
         userName.value = params.identityAddress?.username
         userId.value = account.findAuthInfo()?.userid
         domain.value = params.identityAddress?.domain
-        disable.value = !params.registerEnabled()
+        disable.value = !params.registerEnabled
         pushNotification.value = params.pushNotificationAllowed
         pushNotificationsAvailable.value = core.isPushNotificationAvailable
         proxy.value = params.serverAddress?.asStringUriOnly()
-        outboundProxy.value = params.outboundProxyEnabled()
+        outboundProxy.value = params.outboundProxyEnabled
         stunServer.value = params.natPolicy?.stunServer
         ice.value = params.natPolicy?.iceEnabled()
         avpf.value = params.avpfMode == AVPFMode.Enabled
@@ -436,7 +436,7 @@ class AccountSettingsViewModel(val account: Account) : GenericSettingsViewModel(
         expires.value = params.expires
         prefix.value = params.internationalPrefix
         dialPrefix.value = params.useInternationalPrefixForCallsAndChats
-        escapePlus.value = params.dialEscapePlusEnabled()
+        escapePlus.value = params.dialEscapePlusEnabled
     }
 
     private fun initTransportList() {
