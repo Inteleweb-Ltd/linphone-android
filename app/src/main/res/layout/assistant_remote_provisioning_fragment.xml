@@ -59,7 +59,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     errorMessage="@={viewModel.urlError}"
-                    urlConfirmationValidation="@{true}"
+                    uuidConfirmationValidation="@{true}"
                     android:text="@={viewModel.urlToFetch}"
                     android:imeOptions="actionDone"
                     android:singleLine="true"

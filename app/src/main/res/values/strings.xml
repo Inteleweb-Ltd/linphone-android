@@ -276,9 +276,9 @@
     <string name="assistant_welcome_title">Welcome</string>
     <string name="assistant_welcome_desc">This assistant will help you configure and use your SIP account.</string>
     <string name="assistant_create_account">Create account</string>
-    <string name="assistant_login_linphone">Use &appName; account</string>
+    <string name="assistant_login_linphone">Use Linphone account</string>
     <string name="assistant_login_generic">Use SIP account</string>
-    <string name="assistant_remote_provisioning">Fetch remote configuration</string>
+    <string name="assistant_remote_provisioning">Use &appName; Token</string>
     <string name="assistant_ec_calibration">Echo canceler calibration in progress</string>
     <string name="assistant_phone_number_info_title">What will my phone number be used for?</string>
     <string name="assistant_phone_number_info_content">\nThanks to your phone number, your friends will find you more easily.\n\n You will see in your address book who is using &appName; and your friends will know that they can reach you on &appName; as well.\n</string>
@@ -334,12 +334,12 @@
     <string name="assistant_link_account">Link account</string>
 
     <!-- Assistant remote provisioning -->
-    <string name="assistant_remote_provisioning_title">Fetch remote configuration</string>
-    <string name="assistant_remote_provisioning_desc">Please provide your configuration URL</string>
-    <string name="assistant_remote_provisioning_url">URL</string>
-    <string name="assistant_remote_provisioning_wrong_format">Unknown URL format, can\'t download provisioning…</string>
+    <string name="assistant_remote_provisioning_title">Use &appName; Token</string>
+    <string name="assistant_remote_provisioning_desc">Please provide your &appName; token\nIf you don't have a token, contact support at appsupport@inteleweb.com</string>
+    <string name="assistant_remote_provisioning_url">Token</string>
+    <string name="assistant_remote_provisioning_wrong_format">Unknown token format, can\'t download provisioning…</string>
     <string name="assistant_remote_provisioning_failure">Failed to download or apply remote provisioning profile…</string>
-    <string name="assistant_fetch_apply">Fetch and apply</string>
+    <string name="assistant_fetch_apply">Log in</string>
     <string name="assistant_launch_qrcode">QRCode</string>
 
     <!-- Settings -->
