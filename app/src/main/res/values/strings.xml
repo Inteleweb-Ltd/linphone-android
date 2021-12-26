@@ -14,13 +14,13 @@
     <string name="sync_account_name">&appName; contacts</string>
 
     <!-- About screen -->
-    <string name="about_link" translatable="false">https://linphone.org</string>
-    <string name="about_privacy_policy_link" translatable="false">https://www.linphone.org/privacy-policy</string>
+    <string name="about_link" translatable="false">https://inteleweb.com/app</string>
+    <string name="about_privacy_policy_link" translatable="false">https://inteleweb.com/app/privacy-policy</string>
     <string name="about_license_link" translatable="false">https://www.gnu.org/licenses/gpl-3.0.html</string>
     <string name="about_version" translatable="false">&appName; Android %s</string>
-    <string name="about_liblinphone_sdk_version" translatable="false">&appName; SDK %s</string>
+    <string name="about_liblinphone_sdk_version" translatable="false">Linphone SDK %s</string>
     <string name="about_privacy_policy">Visit our privacy policy</string>
-    <string name="about_text" translatable="false">GNU General Public License v3.0\n © 2010–2021 Belledonne Communications</string>
+    <string name="about_text" translatable="false">&appName; v1\nBased on Linphone Android\nGNU General Public License v3.0\n &appName v1 © 2021 Inteleweb Ltd\n Linphone © 2010–2021 Belledonne Communications</string>
 
     <!-- Logs -->
     <string name="logs_upload_failure">Failed to upload logs!</string>
@@ -65,7 +65,7 @@
     <string name="hash_algorithm_sha256">SHA-256</string>
 
     <!-- Launch screen -->
-    <string name="app_description">the <i>libre</i> SIP client</string>
+    <string name="app_description">&appName; Phone v1</string>
 
     <!-- Status fragment -->
     <string name="status_connected">Connected</string>
@@ -283,7 +283,7 @@
     <string name="assistant_phone_number_info_title">What will my phone number be used for?</string>
     <string name="assistant_phone_number_info_content">\nThanks to your phone number, your friends will find you more easily.\n\n You will see in your address book who is using &appName; and your friends will know that they can reach you on &appName; as well.\n</string>
     <string name="assistant_phone_number_link_info_content">\nYour friends will find you more easily if you link your account to your phone number\n\nYou will see in your address book who is using &appName; and your friends will know that they can reach you on &appName; as well.\n</string>
-    <string name="assistant_phone_number_link_info_content_already_account">You can only use your phone number with one &appName; account.\n\nIf you had already linked your number to an other account but you prefer to use this one, simply link it now and your number will automatically be moved to this account.</string>
+    <string name="assistant_phone_number_link_info_content_already_account">You can only use your phone number with one Linphone account.\n\nIf you had already linked your number to an other account but you prefer to use this one, simply link it now and your number will automatically be moved to this account.</string>
     <string name="assistant_general_terms_link" translatable="false">https://www.linphone.org/general-terms</string>
     <string name="assistant_privacy_policy_link" translatable="false">https://www.linphone.org/privacy-policy</string>
     <string name="assistant_general_terms">terms of use</string>
@@ -302,9 +302,9 @@
     <string name="assistant_error_invalid_credentials">Account does not exist or password does not match</string>
 
     <!-- Assistant login -->
-    <string name="assistant_linphone_account">Use your &appName; account</string>
+    <string name="assistant_linphone_account">Use your Linphone account</string>
     <string name="assistant_create_account_part_1">Please confirm your country code and enter your phone number</string>
-    <string name="assistant_linphone_login_desc">Please enter your username and password of &appName; account</string>
+    <string name="assistant_linphone_login_desc">Please enter your username and password of Linphone account</string>
     <string name="assistant_login_with_username">Use your username and password instead of your phone number</string>
     <string name="assistant_login_forgotten_password">Forgot your password?</string>
     <string name="assistant_forgotten_password_link" translatable="false">https://subscribe.linphone.org/</string>
@@ -320,7 +320,7 @@
     <string name="assistant_password_hash_algorithm">Hash algorithm</string>
 
     <!-- Assistant create -->
-    <string name="assistant_create_account_part_email">Please enter a username, email and password for your &appName; account</string>
+    <string name="assistant_create_account_part_email">Please enter a username, email and password for your Linphone account</string>
     <string name="assistant_confirm_password">Password confirmation</string>
     <string name="assistant_validate_account_1">Your account is created. Please check your emails to validate your account:</string>
     <string name="assistant_validate_account_2">Once it is done, come back here and click on the button.</string>
