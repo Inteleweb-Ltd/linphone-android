@@ -37,6 +37,10 @@ class RemoteProvisioningViewModel : ViewModel() {
     val fetchInProgress = MutableLiveData<Boolean>()
     val fetchSuccessfulEvent = MutableLiveData<Event<Boolean>>()
 
+    // Base URL for iWeb Provisioning - remote provisioning uses just
+    // a token, which is appended to the base URL
+    private val BASE_PROVISION_URL = "https://provisioning.inteleweb.com/linphone/config/"
+
     private val listener = object : CoreListenerStub() {
         override fun onConfiguringStatus(core: Core, status: ConfiguringState, message: String?) {
             fetchInProgress.value = false
@@ -71,7 +75,7 @@ class RemoteProvisioningViewModel : ViewModel() {
 
     fun fetchAndApply() {
         val url = urlToFetch.value.orEmpty()
-        coreContext.core.provisioningUri = url
+        coreContext.core.provisioningUri = BASE_PROVISION_URL + url
         Log.w("[Remote Provisioning] Url set to [$url], restarting Core")
         fetchInProgress.value = true
         coreContext.core.stop()
