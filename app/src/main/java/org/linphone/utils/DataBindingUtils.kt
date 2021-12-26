@@ -475,6 +475,24 @@ fun addUrlEditTextValidation(editText: EditText, enabled: Boolean) {
     })
 }
 
+@BindingAdapter("uuidConfirmationValidation")
+fun addUrlEditTextValidation(editText: EditText, enabled: Boolean) {
+    if (!enabled) return
+    editText.addTextChangedListener(object : TextWatcher {
+        override fun afterTextChanged(s: Editable?) {}
+
+        override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+        override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+            // Based on https://stackoverflow.com/a/18399081
+            if (!Pattern.matches("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}", s)) {
+                editText.error =
+                    editText.context.getString(R.string.assistant_remote_provisioning_wrong_format)
+            }
+        }
+    })
+}
+
 @BindingAdapter("passwordConfirmationValidation")
 fun addPasswordConfirmationEditTextValidation(password: EditText, passwordConfirmation: EditText) {
     password.addTextChangedListener(object : TextWatcher {
