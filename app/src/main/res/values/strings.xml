@@ -20,7 +20,7 @@
     <string name="about_version" translatable="false">&appName; Android %s</string>
     <string name="about_liblinphone_sdk_version" translatable="false">Linphone SDK %s</string>
     <string name="about_privacy_policy">Visit our privacy policy</string>
-    <string name="about_text" translatable="false">&appName; v1\nBased on Linphone Android\nGNU General Public License v3.0\n &appName v1 © 2021 Inteleweb Ltd\n Linphone © 2010–2021 Belledonne Communications</string>
+    <string name="about_text" translatable="false">&appName; v1\nBased on Linphone Android\nGNU General Public License v3.0\n &appName; App v1 © 2021 Inteleweb Ltd\n Linphone © 2010–2021 Belledonne Communications</string>
 
     <!-- Logs -->
     <string name="logs_upload_failure">Failed to upload logs!</string>
