@@ -485,16 +485,16 @@ fun addUrlEditTextValidation(editText: EditText, enabled: Boolean) {
 
         override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
             // Based on https://stackoverflow.com/a/18399081
-            // if (!Pattern.matches("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}", s)) {
-            //     editText.error =
-            //         editText.context.getString(R.string.assistant_remote_provisioning_wrong_format)
-            // }
-            
-            when {
-                s?.matches(Regex("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")) == false ->
-                    editText.error =
-                        editText.context.getString(R.string.assistant_remote_provisioning_wrong_format)
+            if (!Pattern.compile("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}").matcher(s).matches()) {
+                editText.error =
+                    editText.context.getString(R.string.assistant_remote_provisioning_wrong_format)
             }
+            
+            // when {
+            //     s?.matches(Regex("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")) == false ->
+            //         editText.error =
+            //             editText.context.getString(R.string.assistant_remote_provisioning_wrong_format)
+            // }
         }
     })
 }
