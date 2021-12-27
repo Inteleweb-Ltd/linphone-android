@@ -25,7 +25,7 @@ import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Pattern
+import java.util.regex.Pattern
 import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
