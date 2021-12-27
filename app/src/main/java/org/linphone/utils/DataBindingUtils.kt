@@ -476,7 +476,7 @@ fun addUrlEditTextValidation(editText: EditText, enabled: Boolean) {
 }
 
 @BindingAdapter("uuidConfirmationValidation")
-fun addUrlEditTextValidation(editText: EditText, enabled: Boolean) {
+fun addUUIDEditTextValidation(editText: EditText, enabled: Boolean) {
     if (!enabled) return
     editText.addTextChangedListener(object : TextWatcher {
         override fun afterTextChanged(s: Editable?) {}
