@@ -335,7 +335,7 @@
 
     <!-- Assistant remote provisioning -->
     <string name="assistant_remote_provisioning_title">Use &appName; Token</string>
-    <string name="assistant_remote_provisioning_desc">Please provide your &appName; token\nIf you don't have a token, contact support at appsupport@inteleweb.com</string>
+    <string name="assistant_remote_provisioning_desc">Please provide your &appName; token\nIf you don\'t have a token, contact support at appsupport@inteleweb.com</string>
     <string name="assistant_remote_provisioning_url">Token</string>
     <string name="assistant_remote_provisioning_wrong_format">Unknown token format, can\'t download provisioning…</string>
     <string name="assistant_remote_provisioning_failure">Failed to download or apply remote provisioning profile…</string>
